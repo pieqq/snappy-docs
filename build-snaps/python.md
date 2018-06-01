@@ -46,7 +46,12 @@ apps:
     command: bin/offlineimap
 
 parts:
+  setup:
+    plugin: python
+    python-version: python2
+    python-packages: [six]
   offlineimap:
+    after: [setup]
     plugin: python
     python-version: python2
     source: .
@@ -80,9 +85,16 @@ Parts define how to build your app. Parts can be anything: programs, libraries, 
 
 The Python plugin will also bundle Python in the snap, so you can be sure that the version of Python you test against is included with your app. Dependencies from `install_requires` in your `setup.py` will also be bundled. Dependencies from a `requirements.txt` file can also be bundled using the `requirements:` option.
 
+The second `setup` part is called before the `offlineimap` part thanks to the `after: [setup]` entry. The `setup` part is currently required as a work-around specific to this application because the `six` python package isn't pulled in by the main `offlineimap` part.
+
 ```yaml
 parts:
+  setup:
+    plugin: python
+    python-version: python2
+    python-packages: [six]
   offlineimap:
+    after: [setup]
     plugin: python
     python-version: python2
     source: .
