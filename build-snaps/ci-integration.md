@@ -32,6 +32,7 @@ Launchpad has no restrictions on build time, and can build for these architectur
  - ARM ARMv7 Hard Float (armhf)
  - Intel x86 (i386)
  - PowerPC64 Little-Endian (ppc64el)
+ - IBM System z (s390x)
 
 First, create an account on Launchpad and a project to host the build:
 1. Fill in the form for a [new account](https://launchpad.net/+login)
