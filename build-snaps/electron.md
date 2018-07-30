@@ -28,7 +28,7 @@ By way of an example, let’s take a look at how a snap is created for the Elect
 
 Using `electron-builder` and a few lines of additional configuration in the `package.json` file an Electron project can be adapted to produce snaps. We’ll break this down.
 
-```
+```json
 {
   "name": "electron-quick-start",
   "version": "1.0.0",
@@ -65,7 +65,7 @@ Using `electron-builder` and a few lines of additional configuration in the `pac
 
 A distribution target (`dist`) needs to be added to the `scripts:` stanza to create package builds for Linux, Windows, and Mac.
 
-```
+```json
   "scripts": {
     "start": "electron .",
     "dist": "build"
@@ -76,7 +76,7 @@ A distribution target (`dist`) needs to be added to the `scripts:` stanza to cre
 
 The distribution target is then made to start the snap build. The `appId` must be set, but is not used on Linux. Refer to the [Electron Builder documentation](https://www.electron.build/configuration/configuration) for an appropriate value if you are also building for Windows and Mac.
 
-```
+```json
   "build": {
     "appId": "io.snapcraft.quick-start",
     "linux": {
