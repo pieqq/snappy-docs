@@ -39,7 +39,7 @@ Tracks allow you to publish different series of your software (1.0, 2.0, etc.) a
 
 ### Overview
 
-<iframe height="450" src="https://www.youtube.com/embed/S3xRFnbVkvs?rel=0&showinfo=0" allowfullscreen></iframe>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/S3xRFnbVkvs?rel=0&showinfo=0" allowfullscreen></iframe>
 
 * By default, snaps are published to a track called `latest`. This is also the default for users when they install a snap, for example `snap install my-app --beta` implies `--channel=latest/beta`.
 * Users do not get automatically moved between tracks. It is the user's decision to not install snaps from the `latest` track, or to move back to it or any other track. Installing a snap from a track is done with the `--channel=<track>/<risk level>` flag.
@@ -51,7 +51,7 @@ There are four risk levels available for snaps, that denote the stability of rev
 
 ### Overview
 
-<iframe height="450" src="https://www.youtube.com/embed/-3b9qkl9Z_k?rel=0&showinfo=0" allowfullscreen></iframe>
+<iframe width="720" height="405" class="video-embed" src="https://www.youtube.com/embed/-3b9qkl9Z_k?rel=0&showinfo=0" allowfullscreen></iframe>
 
 * Note that in developer discussions and some documentation, the "risk level" is often referred as the "channel", since most snaps only use the default track and no branches.
 * By default, the `snap install` command installs snaps from the `stable` level.

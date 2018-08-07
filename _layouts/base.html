@@ -147,5 +147,22 @@
         <footer class="footer-wrapper">
             {% include footer-legal.html %}
         </footer>
+
+        <script>
+
+            // Detect window resize event and adapt videos to it
+            function resizeVideo() {
+                var embeddedVideos = document.querySelectorAll("iframe.video-embed");
+
+                embeddedVideos.forEach( function(embed) {
+                    var newVideoHeight = embed.offsetWidth*9/16;
+                    embed.height = Math.round(newVideoHeight);
+                });
+                
+            }
+
+            window.addEventListener('resize', resizeVideo);
+
+        </script>
     </body>
 </html>

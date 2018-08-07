@@ -274,6 +274,12 @@ $color-focus: #9d9c9a;
     iframe {
       margin: .25em 0 1em 0;
       width: 100%;
+      max-width: 720px;
+      max-height: 405px;
+      
+      @media only screen and (max-width: $breakpoint-medium) {
+        max-height:auto;
+      }
     }
 
     dl {
